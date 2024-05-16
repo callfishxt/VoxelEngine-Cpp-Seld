@@ -8,6 +8,7 @@
     "textures": [
         "misc/moon",
         "misc/sun",
-        "gui/crosshair"
+        "gui/crosshair",
+        "gui/logo"
     ]
 }
