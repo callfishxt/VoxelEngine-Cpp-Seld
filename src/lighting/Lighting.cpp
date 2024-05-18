@@ -65,9 +65,9 @@ void Lighting::buildSkyLight(int cx, int cz){
     Chunk* chunk = chunks->getChunk(cx, cz);
     for (int z = 0; z < CHUNK_D; z++){
         for (int x = 0; x < CHUNK_W; x++){
+            int gx = x + cx * CHUNK_W;
+            int gz = z + cz * CHUNK_D;
             for (int y = chunk->lightmap.highestPoint; y >= 0; y--){
-                int gx = x + cx * CHUNK_W;
-                int gz = z + cz * CHUNK_D;
                 while (y > 0 && !blockDefs[chunk->voxels[vox_index(x, y, z)].id]->lightPassing) {
                     y--;
                 }
